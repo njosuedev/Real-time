@@ -8,4 +8,10 @@ import {Server} from "socket.io";
 
 // instance
 
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+// serving html file
+
 console.log("server is running here!")
