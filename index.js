@@ -14,4 +14,9 @@ const io = new Server(server);
 
 // serving html file
 
+const __direname = dirname(fileURLToPath(import.meta.url));
+app.get("/",(req,res) => res.send(join(__direname,"index.html")));
+
+// Start the server
+
 console.log("server is running here!")
