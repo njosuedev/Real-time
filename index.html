@@ -18,11 +18,19 @@
         console.log("user connected to client");
 
         // disconnected after 5 second
-
-        setTimeout(() => {
-            socket.disconnect()
-        },5000)
+        // setTimeout(() => {
+        //     socket.disconnect()
+        // },5000)
      })
+
+    //  get data
+
+    socket.on("message", message => {
+        console.log(message);
+    })
+
+    socket.emit("new message", "This is a new message from the client");
+
 
     //  disconnection
 
