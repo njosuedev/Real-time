@@ -19,4 +19,5 @@ app.get("/",(req,res) => res.send(join(__direname,"index.html")));
 
 // Start the server
 
-console.log("server is running here!")
+const PORT = 3000;
+server.listen(PORT,() => console.log(`Server is running on : ${PORT}`));
